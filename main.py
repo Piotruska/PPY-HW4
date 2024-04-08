@@ -15,3 +15,11 @@ class Band:
     def add_musician(self, musician):
         self.musicians.append(musician)
 
+    def remove_musician(self, name):
+        for musician in self.musicians:
+            if musician.first_name == name or musician.last_name == name:
+                self.musicians.remove(musician)
+                print(f"{musician.first_name} {musician.last_name} has been removed from the band.")
+                return
+        print(f"No musician with the name '{name}' found in the band.")
+
