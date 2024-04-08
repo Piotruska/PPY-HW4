@@ -23,3 +23,9 @@ class Band:
                 return
         print(f"No musician with the name '{name}' found in the band.")
 
+    def play_music(self):
+        print("Band is playing:")
+        for musician in self.musicians:
+            musician.play()
+
+
