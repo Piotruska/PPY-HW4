@@ -28,4 +28,8 @@ class Band:
         for musician in self.musicians:
             musician.play()
 
-
+    def list_musicians(self):
+        print("  {:<15} {:<15} {:<15} {:<10}".format("First Name", "Last Name", "Instrument", "Role"))
+        for musician in self.musicians:
+            print("  {:<15} {:<15} {:<15} {:<10}".format(
+                musician.first_name, musician.last_name, musician.instrument, musician.role))
