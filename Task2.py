@@ -40,6 +40,10 @@ class TicketReservationSystem:
     def make_reservation(self, event_index, seat_number):
         if 1 <= event_index <= len(self.available_events):
             event = self.available_events[event_index - 1]
+            for ticket in self.reserved_tickets:
+                if ticket.event == event and ticket.seat_number == seat_number:
+                    print(f"Seat {seat_number} for {event.name} is already reserved.")
+                    return
             ticket = Ticket(event, seat_number)
             self.reserved_tickets.append(ticket)
             print(f"Reservation made for {event.name}, Seat Number: {seat_number}")
@@ -53,5 +57,15 @@ class TicketReservationSystem:
         else:
             print("Ticket not found in reservations.")
 
+    def show_reserved_tickets(self):
+        if not self.reserved_tickets:
+            print("No tickets reserved yet.")
+            return
+
+        print("Reserved Tickets:")
+        print("  {:<15} {:<15} {:<15}".format("Event", "Date", "Seat Number"))
+        for ticket in self.reserved_tickets:
+            print("  {:<15} {:<15} {:<15}".format(
+                ticket.event.name, ticket.event.date, ticket.seat_number))
 
 
