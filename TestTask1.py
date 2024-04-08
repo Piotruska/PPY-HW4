@@ -1,5 +1,5 @@
 # Create musicians
-from main import Musician, Band
+from Task1 import Musician, Band
 
 anna_nowak = Musician("Anna", "Nowak", "guitar", "guitarist")
 john_smith = Musician("John", "Smith", "drums", "drummer")
