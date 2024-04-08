@@ -7,3 +7,8 @@ class Musician:
 
     def play(self):
         print(f"{self.first_name} {self.last_name} plays {self.instrument}")
+
+class Band:
+    def __init__(self):
+        self.musicians = []
+
