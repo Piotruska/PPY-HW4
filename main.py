@@ -12,3 +12,6 @@ class Band:
     def __init__(self):
         self.musicians = []
 
+    def add_musician(self, musician):
+        self.musicians.append(musician)
+
