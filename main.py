@@ -5,3 +5,5 @@ class Musician:
         self.instrument = instrument
         self.role = role
 
+    def play(self):
+        print(f"{self.first_name} {self.last_name} plays {self.instrument}")
