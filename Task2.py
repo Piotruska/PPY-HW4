@@ -18,4 +18,10 @@ class Concert(Event):
         return f"{event_info}\nMax Participants: {self.max_participants}"
 
 
+class Ticket:
+    def __init__(self, event, seat_number):
+        self.event = event
+        self.seat_number = seat_number
+
+
 
